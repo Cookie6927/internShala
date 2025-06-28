@@ -16,14 +16,6 @@ def add():
     task = request.form.get('task')
     if task:
         tasks.append(task)
-    return redirect('/')
-
-
-@app.route('/add', methods=['POST'])
-def add():
-    task = request.form.get('task')
-    if task:
-        tasks.append(task)
         logging.info(f"Task added: {task}")
     return redirect('/')
 
